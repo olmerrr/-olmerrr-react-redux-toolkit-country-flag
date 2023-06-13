@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   padding: 2rem 0;
 `;
 
+// @ts-ignore
 const Title = styled(Link).attrs({
   to: '/',
 })`
