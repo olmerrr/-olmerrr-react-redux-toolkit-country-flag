@@ -1,3 +1,5 @@
+import {ReactNode} from "react";
+
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -20,7 +22,9 @@ const Wrapper = styled.section`
     gap: 4rem;
   }
 `;
-
-export const List = ({ children }) => {
+interface ListProps {
+  children: ReactNode
+}
+export const List = ({ children }: ListProps) => {
   return <Wrapper>{children}</Wrapper>;
 };

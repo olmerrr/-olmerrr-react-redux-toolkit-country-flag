@@ -8,13 +8,12 @@ import {Provider} from "react-redux";
 import {store} from "./store";
 
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+
+ReactDOM.render(<React.StrictMode>
+  {/*// @ts-ignore */}
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  </Provider>
+</React.StrictMode>, document.getElementById('root') as HTMLDivElement);

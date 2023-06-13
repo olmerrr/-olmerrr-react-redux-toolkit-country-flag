@@ -8,12 +8,13 @@ import { Details } from './pages/Details';
 import { NotFound } from './pages/NotFound';
 
 function App() {
+  // <Route exact/> атрибут  exact уже не нужен в 6-й версии react-router
   return (
     <>
       <Header />
       <Main>
         <Routes>
-          <Route exact path="/" element={
+          <Route path="/" element={
             <HomePage />
           } />
           <Route path="/country/:name" element={<Details />} />
