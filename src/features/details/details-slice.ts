@@ -1,22 +1,41 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-export const loadCountryByName = createAsyncThunk(
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { Country, Extra, Status } from "types";
+
+export const loadCountryByName = createAsyncThunk<
+  { data: Country[] },
+  string,
+  { extra: Extra }
+>(
   "@@details/load-country-by-name",
  (name, {extra: {client, api}}) => {
     return client.get(api.searchByCountry(name))
   }
 );
 // 1 создаю thunk
-export const loadNeighboursByBorder = createAsyncThunk(
+export const loadNeighboursByBorder = createAsyncThunk<
+//   что ожидаем получить
+  { data: Country[] },
+//   что получаем на вход
+  string[],
+  { extra: Extra }
+
+>(
   "@@details/load-neighbours",
   (borders, {extra: {client, api}}) => {
   return client.get(api.filterByCode(borders))
 })
 
-const initialState = {
+type DetailsSlice = {
+  currentCountry: Country | null,
+  neighbours: string[],
+  status: Status,
+  error: string | null
+}
+const initialState:DetailsSlice = {
   currentCountry: null,
   neighbours: [],
   status: "idle",
-  error: null
+  error: ""
 }
 const detailsSlice = createSlice({
   name: "@@details",
@@ -31,9 +50,9 @@ const detailsSlice = createSlice({
         state.status = "loading";
         state.error = null;
       } )
-      .addCase(loadCountryByName.rejected,(state, action) => {
+      .addCase(loadCountryByName.rejected,(state) => {
         state.status = "rejected";
-        state.error = action.payload || action.meta.error;
+        state.error = "Can't load data.";
       } )
       .addCase(loadCountryByName.fulfilled,(state, action) => {
         state.status = "received";
@@ -45,10 +64,6 @@ const detailsSlice = createSlice({
   })
   }
 });
-
-export const selectCurrentCountry = (state => state.details.currentCountry);
-export const selectDetails = (state => state.details);
-export const selectNeighbours = (state => state.details.neighbours);
 
 export const { clearDetails} = detailsSlice.actions;
 export const detailsReducer = detailsSlice.reducer;
