@@ -1,6 +1,12 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { Region } from "types";
 
-const initialState = {
+interface ControlsSlice {
+  search: string,
+  region: Region | ""
+}
+
+const initialState:ControlsSlice = {
   search: "",
   region: ""
 }
@@ -9,20 +15,15 @@ const controlsSlice = createSlice({
   name: "@@controls",
   initialState,
   reducers: {
-    setSearch: (state, action) => {
+    setSearch: (state, action:PayloadAction<string>) => {
       state.search = action.payload;
     },
-    setRegion: (state, action) => {
+    setRegion: (state, action:PayloadAction<Region | "">) => {
       state.region = action.payload;
     },
     clearControls: () => initialState
   }
 });
-
-// selectors
-export const selectSearch = (state) => state.controls.search;
-export const selectRegion = (state) => state.controls.region;
-export const selectControls = (state) => state.controls;
 
 // actions
 export const {

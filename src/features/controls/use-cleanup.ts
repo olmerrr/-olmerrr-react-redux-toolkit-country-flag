@@ -1,8 +1,8 @@
+import {useAppDispatch} from "store";
 import {clearControls} from "./controls-slice";
-import {useDispatch} from "react-redux";
 
 export const useCleanup = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const cleanUp = () => dispatch(clearControls());
-  return cleanUp;
+  return () => dispatch(cleanUp());
 }
