@@ -1,6 +1,7 @@
 {
   "name": "countries-flags",
   "version": "0.1.0",
+  "homepage": "https://olmerrr.github.io/react-redux-toolkit-country-flag/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
