@@ -1,3 +1,3 @@
-For start
-1) npm install or yarn install
-2) npm start or yarn start
+For start please use yarn
+1)  yarn install
+2)  yarn start
