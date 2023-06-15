@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import Select, { Props } from 'react-select';
 import { Region } from 'types';
-import {RootState} from "../../store";
 
 export type CountryOption = {
   label: Region,

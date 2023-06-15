@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://olmerrr.github.io/react-redux-toolkit-country-flag/",
   "author": "Yaroslav Dombrovskyi",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
     "axios": "^0.22.0",
