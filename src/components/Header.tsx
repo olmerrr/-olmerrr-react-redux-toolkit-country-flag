@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled(Link).attrs({
-  to: "/react-redux-toolkit-country-flag",
+  to: "/react-redux-toolkit-country-flag/",
 })`
   color: var(--colors-text);
   font-size: var(--fs-sm);
