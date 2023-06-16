@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Main>
         <Routes>
-          <Route path="/" element={
+          <Route element={
             <HomePage />
           } />
           <Route path="/country/:name" element={<Details />} />
