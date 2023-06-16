@@ -14,7 +14,6 @@ function MySelect(props: Props<CountryOption, false>) {
   );
 }
 
-// @ts-ignore
 export const CustomSelect = styled(MySelect).attrs({
   styles: {
     control: (provided: any) => ({

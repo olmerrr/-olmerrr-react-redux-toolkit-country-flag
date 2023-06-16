@@ -41,6 +41,6 @@ body {
   background-color: var(--colors-bg);
 }
 
-.hader__title {
+.header__title {
   font-size: 22px!important;
 }

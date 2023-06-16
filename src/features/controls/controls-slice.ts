@@ -3,12 +3,14 @@ import { Region } from "types";
 
 interface ControlsSlice {
   search: string,
-  region: Region | ""
+  region: Region | "",
+  indexPath: string
 }
 
 const initialState:ControlsSlice = {
   search: "",
-  region: ""
+  region: "",
+  indexPath: "/react-redux-toolkit-country-flag"
 }
 
 const controlsSlice = createSlice({

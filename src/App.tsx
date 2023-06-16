@@ -6,16 +6,18 @@ import { Main } from './components/Main';
 import { HomePage } from './pages/HomePage';
 import { Details } from './pages/Details';
 import { NotFound } from './pages/NotFound';
-
-const indexPath:string = "/react-redux-toolkit-country-flag/";
+import {useSelector} from "react-redux";
+import {selectIndexPage} from "./features/controls/controls-selectors";
 function App() {
+  const indexPath = useSelector(selectIndexPage);
+
   return (
     <>
       <Header />
       <Main>
         <Routes>
           <Route
-              path={indexPath || "/"}
+              path={indexPath}
               element={
                  <HomePage />}
           />

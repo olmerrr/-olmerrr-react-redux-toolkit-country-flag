@@ -17,9 +17,8 @@ const Wrapper = styled.div`
   padding: 2rem 0;
 `;
 
-// @ts-ignore
 const Title = styled(Link).attrs({
-  to: '/',
+  to: "/react-redux-toolkit-country-flag",
 })`
   color: var(--colors-text);
   font-size: var(--fs-sm);
@@ -34,7 +33,7 @@ const cleanUp = useCleanup()
     <HeaderEl>
       <Container>
         <Wrapper>
-          <Title className="hader__title" onClick={cleanUp}>Countries</Title>
+          <Title className="header__title" onClick={cleanUp}>Countries</Title>
           <ThemeSwitcher/>
         </Wrapper>
       </Container>
