@@ -17,8 +17,8 @@ function App() {
           <Route
               path="/react-redux-toolkit-country-flag/"
               element={
-            <HomePage />
-          } />
+                 <HomePage />}
+          />
           <Route path="/country/:name" element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
