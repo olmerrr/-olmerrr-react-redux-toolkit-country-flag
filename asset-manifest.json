@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-redux-toolkit-country-flag/static/css/main.b202a51a.css",
-    "main.js": "/react-redux-toolkit-country-flag/static/js/main.f6352565.js",
+    "main.js": "/react-redux-toolkit-country-flag/static/js/main.6adfece9.js",
     "index.html": "/react-redux-toolkit-country-flag/index.html",
     "main.b202a51a.css.map": "/react-redux-toolkit-country-flag/static/css/main.b202a51a.css.map",
-    "main.f6352565.js.map": "/react-redux-toolkit-country-flag/static/js/main.f6352565.js.map"
+    "main.6adfece9.js.map": "/react-redux-toolkit-country-flag/static/js/main.6adfece9.js.map"
   },
   "entrypoints": [
     "static/css/main.b202a51a.css",
-    "static/js/main.f6352565.js"
+    "static/js/main.6adfece9.js"
   ]
 }
