@@ -15,7 +15,7 @@ function App() {
       <Main>
         <Routes>
           <Route
-              path="/"
+              path={indexPath || "/"}
               element={
                  <HomePage />}
           />
