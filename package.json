@@ -1,7 +1,7 @@
 {
   "name": "countries-flags",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://olmerrr.github.io/react-redux-toolkit-country-flag/",
   "author": "Yaroslav Dombrovskyi",
   "private": false,
   "dependencies": {
