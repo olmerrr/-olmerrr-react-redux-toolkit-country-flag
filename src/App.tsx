@@ -7,15 +7,15 @@ import { HomePage } from './pages/HomePage';
 import { Details } from './pages/Details';
 import { NotFound } from './pages/NotFound';
 
+const indexPath:string = "/react-redux-toolkit-country-flag/";
 function App() {
-  // <Route exact/> атрибут  exact уже не нужен в 6-й версии react-router
   return (
     <>
       <Header />
       <Main>
         <Routes>
           <Route
-              path="/react-redux-toolkit-country-flag/"
+              path="/"
               element={
                  <HomePage />}
           />
